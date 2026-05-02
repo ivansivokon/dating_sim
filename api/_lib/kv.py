@@ -2,7 +2,7 @@ import os
 import json
 from redis.asyncio import from_url
 
-KV_URL = os.environ['KV_URL']  # Vercel сам подставит
+KV_URL = os.environ['KV_URL']
 
 async def get_redis():
     return from_url(KV_URL, decode_responses=True)
