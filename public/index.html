@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Симулятор свиданий</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login-screen">
+    <div class="login-box">
+      <h1>💖 Симулятор свиданий</h1>
+      <input type="text" id="username" placeholder="Логин">
+      <input type="password" id="password" placeholder="Пароль">
+      <button id="login-btn">Войти</button>
+      <button id="register-btn">Регистрация</button>
+      <p id="auth-error"></p>
+    </div>
+  </div>
+
+  <div id="game-screen" style="display:none;">
+    <div class="top-bar">
+      <span id="player-nick"></span>
+      <div class="location-selector">
+        <button data-loc="School" class="loc-btn">🏫 Школа</button>
+        <button data-loc="Park" class="loc-btn">🌳 Парк</button>
+        <button data-loc="Cafe" class="loc-btn">☕ Кафе</button>
+      </div>
+    </div>
+    <div id="location-view">
+      <!-- динамически меняется фон и список девушек -->
+    </div>
+  </div>
+
+  <!-- Модальное окно диалога -->
+  <div id="dialogue-modal" class="modal hidden">
+    <div class="modal-content">
+      <div id="dialogue-header">
+        <span id="dialogue-girl-name"></span>
+        <button id="close-dialogue">✕</button>
+      </div>
+      <div id="chat-messages"></div>
+      <div class="chat-input-area">
+        <input type="text" id="chat-input" placeholder="Сообщение...">
+        <button id="send-btn">Отправить</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
