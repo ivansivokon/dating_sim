@@ -4,8 +4,8 @@ import uuid
 from http.server import BaseHTTPRequestHandler
 from urllib.parse import urlparse
 
-from api._lib.kv import get_state, save_state, default_girls
-from api._lib.ai import generate_response
+from ._lib.kv import get_state, save_state, default_girls
+from ._lib.ai import generate_response
 
 class handler(BaseHTTPRequestHandler):
     def do_POST(self):
